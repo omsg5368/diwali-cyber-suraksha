@@ -4,6 +4,7 @@ import { DEFAULT_GREETING_TEMPLATES } from '../data/greetingsData';
 import { Share2, Copy, Check, Sparkles, Heart, Shield, Printer } from 'lucide-react';
 import { triggerGoldShower } from '../utils/confetti';
 import { playTempleChime } from '../utils/audio';
+import { Tilt3DCard } from './Tilt3DCard';
 
 interface GreetingCardStudioProps {
   soundEnabled: boolean;
@@ -190,79 +191,82 @@ export const GreetingCardStudio: React.FC<GreetingCardStudioProps> = ({ soundEna
           {/* Live Card Preview (Right 7 Cols) */}
           <div className="lg:col-span-7 flex flex-col items-center">
             
-            {/* The Ornamental Card Container */}
-            <div 
-              id="printable-card"
-              className="w-full max-w-lg p-7 sm:p-9 rounded-3xl bg-gradient-to-b from-[#140b05] via-[#101424] to-[#0c0803] border-4 border-amber-400/80 shadow-2xl shadow-amber-500/20 relative overflow-hidden text-center"
-            >
-              {/* Traditional Gold Ornamental Corner Accents */}
-              <div className="absolute top-2 left-2 text-amber-400/40 text-lg select-none">⚜️</div>
-              <div className="absolute top-2 right-2 text-amber-400/40 text-lg select-none">⚜️</div>
-              <div className="absolute bottom-2 left-2 text-amber-400/40 text-lg select-none">⚜️</div>
-              <div className="absolute bottom-2 right-2 text-amber-400/40 text-lg select-none">⚜️</div>
+            {/* 3D Tilt Wrapper */}
+            <Tilt3DCard className="w-full max-w-lg">
+              {/* The Ornamental Card Container */}
+              <div 
+                id="printable-card"
+                className="w-full p-7 sm:p-9 rounded-3xl bg-gradient-to-b from-[#140b05] via-[#101424] to-[#0c0803] border-4 border-amber-400/80 shadow-2xl shadow-amber-500/20 relative overflow-hidden text-center"
+              >
+                {/* Traditional Gold Ornamental Corner Accents */}
+                <div className="absolute top-2 left-2 text-amber-400/40 text-lg select-none">⚜️</div>
+                <div className="absolute top-2 right-2 text-amber-400/40 text-lg select-none">⚜️</div>
+                <div className="absolute bottom-2 left-2 text-amber-400/40 text-lg select-none">⚜️</div>
+                <div className="absolute bottom-2 right-2 text-amber-400/40 text-lg select-none">⚜️</div>
 
-              {/* Shubh Labh / Swastik traditional header */}
-              <div className="flex items-center justify-center gap-4 text-amber-400 text-sm font-semibold tracking-widest mb-3">
-                <span>शुभ</span>
-                <span className="text-2xl animate-float">🪔</span>
-                <span>लाभ</span>
-              </div>
-
-              {/* Sanskrit Mantra */}
-              <p className="font-['Cinzel'] text-xs text-amber-300/80 italic tracking-wider mb-4 border-b border-amber-500/20 pb-2">
-                ॐ महालक्ष्म्यै नमः • ॐ धन्वन्तरये नमः
-              </p>
-
-              {/* Recipient */}
-              <div className="mb-4">
-                <span className="text-[11px] uppercase tracking-widest text-amber-400 font-semibold block">
-                  Auspicious Greetings To
-                </span>
-                <h4 className="text-2xl sm:text-3xl font-extrabold font-['Cinzel'] gold-gradient-text mt-0.5">
-                  {cardState.recipientName || "Beloved Family"}
-                </h4>
-              </div>
-
-              {/* Occasion Badge */}
-              <div className="inline-block px-3 py-1 rounded-full bg-amber-950/70 border border-amber-400/40 text-amber-300 text-xs font-bold mb-4 uppercase tracking-wider">
-                {cardState.occasion === 'dhanteras' && '🪙 Shubh Dhanteras Blessings'}
-                {cardState.occasion === 'diwali' && '🪔 Happy Deepavali / Festival of Lights'}
-                {cardState.occasion === 'both' && '🪙 Shubh Dhanteras & Happy Deepavali 🪔'}
-              </div>
-
-              {/* Blessing Body */}
-              <p className="text-sm sm:text-base text-amber-100/90 leading-relaxed font-sans mb-6 italic px-2">
-                "{cardState.customBlessing}"
-              </p>
-
-              {/* Cyber Suraksha Stamp */}
-              {cardState.includeCyberTips && (
-                <div className="mb-6 p-3 rounded-xl bg-slate-950/70 border border-emerald-500/40 text-left flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-emerald-950 border border-emerald-500/50">
-                    <Shield className="w-5 h-5 text-emerald-400" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-bold text-emerald-300 block uppercase tracking-wider">
-                      Family Cyber Shield Certified
-                    </span>
-                    <span className="text-[11px] text-zinc-300 block">
-                      Shop safe on Amazon, Flipkart, Myntra • Never share UPI PIN for cashbacks • Helpline: 1930
-                    </span>
-                  </div>
+                {/* Shubh Labh / Swastik traditional header */}
+                <div className="flex items-center justify-center gap-4 text-amber-400 text-sm font-semibold tracking-widest mb-3">
+                  <span>शुभ</span>
+                  <span className="text-2xl animate-float">🪔</span>
+                  <span>लाभ</span>
                 </div>
-              )}
 
-              {/* Signature */}
-              <div className="pt-3 border-t border-amber-500/20">
-                <span className="text-[11px] text-amber-400/70 uppercase tracking-widest block">
-                  With Reverence & Blessings,
-                </span>
-                <p className="font-['Cinzel'] text-base sm:text-lg font-bold text-amber-200 mt-0.5">
-                  {cardState.senderName}
+                {/* Sanskrit Mantra */}
+                <p className="font-['Cinzel'] text-xs text-amber-300/80 italic tracking-wider mb-4 border-b border-amber-500/20 pb-2">
+                  ॐ महालक्ष्म्यै नमः • ॐ धन्वन्तरये नमः
                 </p>
-              </div>
 
-            </div>
+                {/* Recipient */}
+                <div className="mb-4">
+                  <span className="text-[11px] uppercase tracking-widest text-amber-400 font-semibold block">
+                    Auspicious Greetings To
+                  </span>
+                  <h4 className="text-2xl sm:text-3xl font-extrabold font-['Cinzel'] gold-gradient-text mt-0.5">
+                    {cardState.recipientName || "Beloved Family"}
+                  </h4>
+                </div>
+
+                {/* Occasion Badge */}
+                <div className="inline-block px-3 py-1 rounded-full bg-amber-950/70 border border-amber-400/40 text-amber-300 text-xs font-bold mb-4 uppercase tracking-wider">
+                  {cardState.occasion === 'dhanteras' && '🪙 Shubh Dhanteras Blessings'}
+                  {cardState.occasion === 'diwali' && '🪔 Happy Deepavali / Festival of Lights'}
+                  {cardState.occasion === 'both' && '🪙 Shubh Dhanteras & Happy Deepavali 🪔'}
+                </div>
+
+                {/* Blessing Body */}
+                <p className="text-sm sm:text-base text-amber-100/90 leading-relaxed font-sans mb-6 italic px-2">
+                  "{cardState.customBlessing}"
+                </p>
+
+                {/* Cyber Suraksha Stamp */}
+                {cardState.includeCyberTips && (
+                  <div className="mb-6 p-3 rounded-xl bg-slate-950/70 border border-emerald-500/40 text-left flex items-center gap-3">
+                    <div className="p-2 rounded-lg bg-emerald-950 border border-emerald-500/50">
+                      <Shield className="w-5 h-5 text-emerald-400" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-bold text-emerald-300 block uppercase tracking-wider">
+                        Family Cyber Shield Certified
+                      </span>
+                      <span className="text-[11px] text-zinc-300 block">
+                        Shop safe on Amazon, Flipkart, Myntra • Never share UPI PIN for cashbacks • Helpline: 1930
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Signature */}
+                <div className="pt-3 border-t border-amber-500/20">
+                  <span className="text-[11px] text-amber-400/70 uppercase tracking-widest block">
+                    With Reverence & Blessings,
+                  </span>
+                  <p className="font-['Cinzel'] text-base sm:text-lg font-bold text-amber-200 mt-0.5">
+                    {cardState.senderName}
+                  </p>
+                </div>
+
+              </div>
+            </Tilt3DCard>
 
             {/* Sharing Action Toolbar */}
             <div className="w-full max-w-lg mt-6 flex flex-wrap items-center justify-center gap-3">

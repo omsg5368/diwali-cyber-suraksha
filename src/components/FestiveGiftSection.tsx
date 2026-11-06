@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Copy, Check, QrCode, Smartphone, Sparkles, Heart, ShieldCheck, ExternalLink, Award } from 'lucide-react';
 import { triggerGoldShower } from '../utils/confetti';
 import { playTempleChime } from '../utils/audio';
+import { Tilt3DCard } from './Tilt3DCard';
 
 interface FestiveGiftSectionProps {
   soundEnabled: boolean;
@@ -112,56 +113,58 @@ export const FestiveGiftSection: React.FC<FestiveGiftSectionProps> = ({ soundEna
           {/* Right Column: Google Pay QR Code & UPI ID (6 Cols) */}
           <div className="md:col-span-6 flex flex-col items-center">
             
-            <div className="w-full max-w-sm p-6 rounded-3xl bg-gradient-to-b from-[#161224] via-[#0f1422] to-[#0a0d18] border-2 border-amber-400/60 shadow-2xl shadow-amber-500/20 text-center relative overflow-hidden">
-              
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-rose-500 to-amber-500" />
+            <Tilt3DCard className="w-full max-w-sm">
+              <div className="w-full p-6 rounded-3xl bg-gradient-to-b from-[#161224] via-[#0f1422] to-[#0a0d18] border-2 border-amber-400/60 shadow-2xl shadow-amber-500/20 text-center relative overflow-hidden">
+                
+                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-rose-500 to-amber-500" />
 
-              <span className="text-xs uppercase tracking-widest text-amber-400 font-bold block mb-1">
-                Official Google Pay / UPI QR
-              </span>
-              <h4 className="text-lg font-bold text-amber-100 font-['Cinzel'] mb-3">
-                Scan with Any UPI App
-              </h4>
+                <span className="text-xs uppercase tracking-widest text-amber-400 font-bold block mb-1">
+                  Official Google Pay / UPI QR
+                </span>
+                <h4 className="text-lg font-bold text-amber-100 font-['Cinzel'] mb-3">
+                  Scan with Any UPI App
+                </h4>
 
-              {/* The Actual Uploaded QR Code Image */}
-              <div className="p-3 bg-white rounded-2xl shadow-xl inline-block mx-auto mb-4 border-2 border-amber-400/40">
-                <img
-                  src="./om-gautam-upi-qr.jpg"
-                  alt="Om Gautam UPI QR Code - omgautam721-3@okicici"
-                  className="w-56 h-auto max-w-full rounded-xl mx-auto object-contain"
-                />
-              </div>
-
-              {/* UPI ID Pill with Copy Button */}
-              <div className="mb-4 p-3 rounded-xl bg-slate-900 border border-zinc-700/80 flex items-center justify-between gap-2">
-                <div className="text-left font-mono text-xs">
-                  <span className="text-[10px] text-zinc-400 block uppercase font-bold">UPI ID:</span>
-                  <span className="text-amber-300 font-semibold select-all">omgautam721-3@okicici</span>
+                {/* The Actual Uploaded QR Code Image */}
+                <div className="p-3 bg-white rounded-2xl shadow-xl inline-block mx-auto mb-4 border-2 border-amber-400/40">
+                  <img
+                    src="./om-gautam-upi-qr.jpg"
+                    alt="Om Gautam UPI QR Code - omgautam721-3@okicici"
+                    className="w-56 h-auto max-w-full rounded-xl mx-auto object-contain"
+                  />
                 </div>
-                <button
-                  onClick={handleCopy}
-                  className="p-2 rounded-lg bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 transition-all text-xs font-semibold flex items-center gap-1 cursor-pointer"
-                  title="Copy UPI ID"
+
+                {/* UPI ID Pill with Copy Button */}
+                <div className="mb-4 p-3 rounded-xl bg-slate-900 border border-zinc-700/80 flex items-center justify-between gap-2">
+                  <div className="text-left font-mono text-xs">
+                    <span className="text-[10px] text-zinc-400 block uppercase font-bold">UPI ID:</span>
+                    <span className="text-amber-300 font-semibold select-all">omgautam721-3@okicici</span>
+                  </div>
+                  <button
+                    onClick={handleCopy}
+                    className="p-2 rounded-lg bg-amber-500/20 hover:bg-amber-500 text-amber-300 hover:text-slate-950 transition-all text-xs font-semibold flex items-center gap-1 cursor-pointer"
+                    title="Copy UPI ID"
+                  >
+                    {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                    <span className="text-[11px]">{copied ? 'Copied!' : 'Copy'}</span>
+                  </button>
+                </div>
+
+                {/* Mobile Direct UPI Pay Button */}
+                <a
+                  href={upiDeepLink}
+                  className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/30 transition-all flex items-center justify-center gap-2"
                 >
-                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                  <span className="text-[11px]">{copied ? 'Copied!' : 'Copy'}</span>
-                </button>
+                  <Smartphone className="w-4 h-4 text-slate-950" />
+                  <span>Pay via UPI App (GPay / PhonePe / Paytm)</span>
+                </a>
+
+                <p className="text-[10px] text-zinc-400 mt-3">
+                  GPay • PhonePe • Paytm • BHIM • Amazon Pay
+                </p>
+
               </div>
-
-              {/* Mobile Direct UPI Pay Button */}
-              <a
-                href={upiDeepLink}
-                className="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-amber-500 via-amber-600 to-yellow-500 hover:from-amber-400 hover:to-yellow-400 text-slate-950 font-bold text-xs sm:text-sm shadow-lg shadow-amber-500/30 transition-all flex items-center justify-center gap-2"
-              >
-                <Smartphone className="w-4 h-4 text-slate-950" />
-                <span>Pay via UPI App (GPay / PhonePe / Paytm)</span>
-              </a>
-
-              <p className="text-[10px] text-zinc-400 mt-3">
-                GPay • PhonePe • Paytm • BHIM • Amazon Pay
-              </p>
-
-            </div>
+            </Tilt3DCard>
 
           </div>
 
@@ -171,3 +174,4 @@ export const FestiveGiftSection: React.FC<FestiveGiftSectionProps> = ({ soundEna
     </section>
   );
 };
+

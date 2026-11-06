@@ -89,7 +89,7 @@ export const VirtualDiyaStage: React.FC<VirtualDiyaStageProps> = ({ soundEnabled
             <div
               key={diya.id}
               onClick={() => handleLightDiya(diya.id)}
-              className={`group relative p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col items-center text-center select-none ${
+              className={`group relative p-5 rounded-2xl border transition-all duration-300 cursor-pointer flex flex-col items-center text-center select-none card-3d-hover ${
                 diya.isLit
                   ? 'bg-gradient-to-b from-amber-950/40 via-[#0d1527] to-[#070a12] border-amber-400/60 shadow-lg shadow-amber-500/20 scale-[1.02]'
                   : 'bg-[#0b101d]/60 border-zinc-800 hover:border-amber-500/40 hover:bg-[#0e1628]'

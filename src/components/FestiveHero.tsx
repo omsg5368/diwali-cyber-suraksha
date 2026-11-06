@@ -1,7 +1,8 @@
 import React from 'react';
-import { Shield, Sparkles, Heart, ChevronRight, Lock, BellRing, Gift } from 'lucide-react';
+import { Shield, Sparkles, Heart, ChevronRight, Lock, BellRing, Gift, Box } from 'lucide-react';
 import { triggerGoldShower } from '../utils/confetti';
 import { playTempleChime } from '../utils/audio';
+import { Festive3DCanvas } from './Festive3DCanvas';
 
 interface FestiveHeroProps {
   soundEnabled: boolean;
@@ -109,6 +110,11 @@ export const FestiveHero: React.FC<FestiveHeroProps> = ({ soundEnabled }) => {
             <Shield className="w-4 h-4 text-emerald-400" />
             <span>5 Cyber Defense Rules</span>
           </a>
+        </div>
+
+        {/* Interactive 3D WebGL Diya & Cyber Shield Viewport */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <Festive3DCanvas soundEnabled={soundEnabled} />
         </div>
 
         {/* Trust & Awareness Highlights Cards */}
