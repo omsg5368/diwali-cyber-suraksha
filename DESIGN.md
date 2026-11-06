@@ -21,7 +21,17 @@ The aesthetic unites the sacred warmth and golden radiance of Indian festivals (
 
 ## 2. Interactive Micro-Interactions
 
-### 2.1. The Virtual Diya Engine
+### 2.0. The 3D WebGL Diya & Cyber Defense Canvas (Three.js)
+- **Viewport**: Interactive perspective viewport (`PerspectiveCamera(45, aspect, 0.1, 100)`).
+- **Procedural 3D Diya**: Sliced brass cylinder with gold torus rim and extruded wick.
+- **Dynamic 3D Multi-Layer Flame**: Cone geometries with glowing additive shaders and a real point light (`PointLight(0xf59e0b)`) flickering realistically in real-time.
+- **Orbiting 3D Dhanteras Gold Coins**: 6 metallic gold coins revolving with sine-wave vertical bobbing.
+- **Holographic 3D Cyber Shield**: Geodesic wireframe icosahedron and glowing cyan rings representing cyber defense boundaries.
+- **Mouse & Touch Parallax**: Dynamic lerping tilt responding to cursor movement; clicking triggers celebratory particle flares and 528Hz bell chimes.
+
+### 2.0.1. 3D Perspective Card Tilt (`Tilt3DCard`)
+- Real spatial depth tilt with `perspective(1000px) rotateX(...) rotateY(...)`.
+- Dynamic radial gradient specular glare layer tracking the exact mouse position.
 - Clicking any unlit diya triggers:
   1. Procedural flame lighting animation with pulsating orange-yellow radial gradients.
   2. Flame flicker CSS animation with floating embers.

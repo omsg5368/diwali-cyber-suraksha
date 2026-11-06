@@ -37,3 +37,12 @@
 - [x] Git repository initialized and clean commit on `main`.
 - [x] Dev server running live on `http://localhost:3001/`.
 - [x] Standalone portable build ready for static deployment (Netlify / GitHub Pages / Vercel).
+
+### Phase 5: 3D Graphics & Spatial Perspective Engine
+- [x] Integrated Three.js WebGL canvas (`Festive3DCanvas.tsx`) in Hero.
+- [x] Procedural 3D brass Diya with real-time flickering flame and point light.
+- [x] 6 floating, spinning Dhanteras gold coins with dynamic bobbing physics.
+- [x] Holographic 3D cyber defense wireframe shield and orbiting cyan rings.
+- [x] Mouse & touch parallax tracking with smooth lerp damping.
+- [x] 3D perspective tilt cards (`Tilt3DCard.tsx`) with dynamic specular glare for the UPI QR card and family greeting card.
+- [x] Memory lifecycle management: full cleanup (`dispose()`) of geometries, materials, and requestAnimationFrame loops.

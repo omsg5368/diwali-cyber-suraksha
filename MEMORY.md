@@ -46,3 +46,12 @@
 - **Decision**: Embed official Google Pay QR code asset (`public/om-gautam-upi-qr.jpg`) and UPI ID `omgautam721-3@okicici` in a dedicated festive shagun module (`FestiveGiftSection.tsx`).
 - **Features**: Direct 1-tap UPI app deep linking (`upi://pay?pa=omgautam721-3@okicici...`), one-click clipboard copy, and educational reinforcement demonstrating that genuine UPI payments require user PIN authorization, whereas receiving money never asks for a PIN.
 
+### ADR-007: Pure Three.js 3D WebGL Canvas & Perspective Tilt Architecture
+- **Decision**: Integrate a dedicated Three.js WebGL viewport (`Festive3DCanvas.tsx`) alongside a CSS 3D perspective spatial tilt wrapper (`Tilt3DCard.tsx`).
+- **3D Features**:
+  1. Handcrafted procedural 3D brass diya with real-time point lighting and flickering multi-layer flame cones.
+  2. 6 floating, rotating metallic Dhanteras gold coins with dynamic bobbing offsets.
+  3. Holographic 3D cyber shield orbit (geodesic wireframe + cyan orbital rings) symbolizing digital protection.
+  4. Cursor-following parallax damping (lerp) and interactive click-to-bless particle triggers.
+  5. Strict GPU memory disposal (`dispose()` on all geometries, materials, renderers) to ensure 60fps performance without memory leaks.
+

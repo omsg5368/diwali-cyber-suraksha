@@ -11,6 +11,8 @@ flowchart TD
         Hero["Festive Hero & Quick Jump Navigation"]
         
         subgraph GreetingsEngine ["Cultural Greeting Module"]
+            Festive3D["Interactive 3D WebGL Diya Canvas (Three.js WebGL Engine)"]
+            TiltCards["Perspective 3D Tilt Card Engine (Spatial Lighting & Glare)"]
             DhanterasPavilion["Dhanteras Pavilion (Wealth & Dhanvantari Health)"]
             DiwaliPavilion["Deepavali Pavilion (Lights & Spiritual Triumph)"]
             InteractiveDiya["Interactive Virtual Diya Lighting Engine"]
