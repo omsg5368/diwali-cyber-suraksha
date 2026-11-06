@@ -223,3 +223,4 @@ export const VirtualDiyaStage: React.FC<VirtualDiyaStageProps> = ({ soundEnabled
     </section>
   );
 };
+

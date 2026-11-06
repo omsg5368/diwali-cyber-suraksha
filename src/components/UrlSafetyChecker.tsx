@@ -187,3 +187,4 @@ export const UrlSafetyChecker: React.FC<UrlSafetyCheckerProps> = ({ soundEnabled
     </section>
   );
 };
+

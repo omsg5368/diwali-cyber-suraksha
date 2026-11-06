@@ -76,3 +76,4 @@ export const SCAM_QUIZ_QUESTIONS: QuizQuestion[] = [
     safetyTip: "Official in-app notifications and verified storefront pages are the safest way to browse and shop for festive deals."
   }
 ];
+

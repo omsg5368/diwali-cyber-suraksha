@@ -141,3 +141,4 @@ export function playWarningBeep() {
     console.debug('Audio error:', e);
   }
 }
+

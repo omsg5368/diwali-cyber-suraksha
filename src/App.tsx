@@ -7,6 +7,7 @@ import { CyberRulesSection } from './components/CyberRulesSection';
 import { AuthorizedStorefronts } from './components/AuthorizedStorefronts';
 import { UrlSafetyChecker } from './components/UrlSafetyChecker';
 import { ScamSimulatorQuiz } from './components/ScamSimulatorQuiz';
+import { FestiveGiftSection } from './components/FestiveGiftSection';
 import { EmergencyResponse } from './components/EmergencyResponse';
 import { FireworksCanvas } from './components/FireworksCanvas';
 import { Footer } from './components/Footer';
@@ -42,6 +43,9 @@ export const App: React.FC = () => {
         {/* Spot the Scam: Interactive Family Quiz */}
         <ScamSimulatorQuiz soundEnabled={soundEnabled} />
 
+        {/* Festive Shagun & UPI QR Gift Section */}
+        <FestiveGiftSection soundEnabled={soundEnabled} />
+
         {/* National Emergency Protocol (1930 & Golden Hour) */}
         <EmergencyResponse />
       </main>
@@ -56,3 +60,4 @@ export const App: React.FC = () => {
 };
 
 export default App;
+

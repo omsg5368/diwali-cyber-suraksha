@@ -19,3 +19,4 @@ This repository operates under a strict documentation and development protocol:
 3. **Writing & Voice Standards (Unslop Enforcement)**:
    - Adhere strictly to the `unslop` guidelines.
    - Never write robotic filler phrases or AI marketing hype. Keep all text grounded, human, precise, and practical for everyday family members.
+

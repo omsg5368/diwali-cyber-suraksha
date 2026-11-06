@@ -28,3 +28,4 @@ export const FireworksCanvas: React.FC<FireworksCanvasProps> = ({ soundEnabled }
     </div>
   );
 };
+

@@ -243,3 +243,4 @@ export const ScamSimulatorQuiz: React.FC<ScamSimulatorQuizProps> = ({ soundEnabl
     </section>
   );
 };
+

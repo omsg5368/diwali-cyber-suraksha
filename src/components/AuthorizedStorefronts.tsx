@@ -129,3 +129,4 @@ export const AuthorizedStorefronts: React.FC = () => {
     </section>
   );
 };
+

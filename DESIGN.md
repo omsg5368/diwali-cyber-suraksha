@@ -37,3 +37,4 @@ The aesthetic unites the sacred warmth and golden radiance of Indian festivals (
 - Real-time visual feedback on URL safety:
   - Green Shield: Official verified merchant (e.g., `amazon.in`, `flipkart.com`, `myntra.com`).
   - Red Warning: Typosquatting or high-risk domain (e.g., `*.xyz`, `*-deals.top`, `*-offers.online`).
+

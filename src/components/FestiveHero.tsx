@@ -53,11 +53,27 @@ export const FestiveHero: React.FC<FestiveHeroProps> = ({ soundEnabled }) => {
         </h1>
 
         {/* Subtitle / Family Tribute */}
-        <p className="max-w-3xl mx-auto text-base sm:text-lg text-amber-100/80 font-normal leading-relaxed mb-8">
-          A loving festive tribute to our parents, elders, siblings, and extended family. 
+        <p className="max-w-3xl mx-auto text-base sm:text-lg text-amber-100/80 font-normal leading-relaxed mb-4">
+          A loving festive tribute to our parents, elders, siblings, and extended family by <strong className="text-amber-300 font-semibold">Om Shrikrishna Gautam</strong> (Ex-Penetration Tester at TMG Security • MSc Cybersecurity Manager, ECE Paris). 
           While we welcome health and prosperity into our households, let us guard our hard-earned wealth 
           against <strong className="text-amber-300 font-semibold">fake discount websites, suspicious WhatsApp forwards, and predatory festive lottery scams</strong>.
         </p>
+
+        {/* Creator Badges */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-8 text-xs">
+          <span className="px-3 py-1 rounded-full bg-slate-900/80 border border-emerald-500/40 text-emerald-300 font-semibold flex items-center gap-1.5">
+            <span>🛡️</span> Ex-Penetration Tester at TMG Security
+          </span>
+          <span className="px-3 py-1 rounded-full bg-slate-900/80 border border-amber-500/40 text-amber-300 font-semibold flex items-center gap-1.5">
+            <span>🎓</span> MSc Cybersecurity Manager | ECE Paris
+          </span>
+          <a
+            href="#festive-gift"
+            className="px-3 py-1 rounded-full bg-gradient-to-r from-amber-500/30 to-yellow-500/30 border border-amber-400 text-amber-200 hover:text-white font-bold flex items-center gap-1 transition-all"
+          >
+            <span>🪙</span> Send Shagun / Gift (UPI QR)
+          </a>
+        </div>
 
         {/* Action Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-10">
@@ -140,3 +156,4 @@ export const FestiveHero: React.FC<FestiveHeroProps> = ({ soundEnabled }) => {
     </section>
   );
 };
+

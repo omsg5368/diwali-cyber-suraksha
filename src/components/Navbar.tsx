@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({ soundEnabled, setSoundEnabled })
                 </span>
               </a>
               <p className="text-[10px] text-amber-200/60 hidden sm:block">
-                Festive Blessings & Cyber Awareness by Om Shrikrishna Gautam
+                Om Gautam • Ex-Penetration Tester at TMG Security | MSc ECE Paris
               </p>
             </div>
           </div>
@@ -59,6 +59,9 @@ export const Navbar: React.FC<NavbarProps> = ({ soundEnabled, setSoundEnabled })
             </a>
             <a href="#url-checker" className="text-amber-100/80 hover:text-amber-300 transition-colors">
               Verify Link
+            </a>
+            <a href="#festive-gift" className="text-amber-300 font-semibold hover:text-amber-200 transition-colors flex items-center gap-1 bg-amber-950/40 border border-amber-500/30 px-2.5 py-1 rounded-full text-xs">
+              <span>🪙</span> Send Shagun
             </a>
           </div>
 
@@ -155,6 +158,13 @@ export const Navbar: React.FC<NavbarProps> = ({ soundEnabled, setSoundEnabled })
             >
               <span>🔍</span> Verify Link
             </a>
+            <a
+              href="#festive-gift"
+              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center gap-2 p-2.5 rounded-lg bg-amber-900/40 border border-amber-400/40 text-amber-200 font-bold col-span-2 justify-center"
+            >
+              <span>🪙</span> Send Festive Shagun / Gift (UPI QR)
+            </a>
           </div>
 
           <div className="pt-2 border-t border-zinc-800">
@@ -171,3 +181,4 @@ export const Navbar: React.FC<NavbarProps> = ({ soundEnabled, setSoundEnabled })
     </nav>
   );
 };
+

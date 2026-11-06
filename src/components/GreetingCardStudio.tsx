@@ -302,3 +302,4 @@ export const GreetingCardStudio: React.FC<GreetingCardStudioProps> = ({ soundEna
     </section>
   );
 };
+

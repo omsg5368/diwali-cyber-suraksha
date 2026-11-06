@@ -49,3 +49,4 @@ export interface CustomCardState {
   customBlessing: string;
   includeCyberTips: boolean;
 }
+

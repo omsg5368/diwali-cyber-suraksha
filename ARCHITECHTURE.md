@@ -91,3 +91,4 @@ diwali-cyber-suraksha/
 2. **Safe Link Navigation**: External links to official portals (`cybercrime.gov.in`, `amazon.in`, `flipkart.com`, `myntra.com`) use `rel="noopener noreferrer"` and explicit domain warnings.
 3. **No Dynamic Code Execution**: User input in the Greeting Card Studio is strictly sanitized through standard React JSX string binding without `dangerouslySetInnerHTML`.
 4. **Offline Resilience**: All visual effects, quiz questions, audio synthesizers, and verified merchant signatures operate fully client-side without API dependencies.
+

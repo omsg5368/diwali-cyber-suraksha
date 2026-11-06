@@ -97,3 +97,4 @@ export const SAFE_CHECK_PRESETS = [
   { url: "https://indiapost-parcels-update.com/pay-five-rupees", isSafe: false, reason: "Dangerous Phishing! Official India Post uses indiapost.gov.in, not commercial .com domains." },
   { url: "https://cybercrime.gov.in", isSafe: true, reason: "Official Government of India National Cybercrime Reporting Portal (.gov.in)." }
 ];
+

@@ -114,3 +114,4 @@ export const EmergencyResponse: React.FC = () => {
     </section>
   );
 };
+

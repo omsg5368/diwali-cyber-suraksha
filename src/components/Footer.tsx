@@ -21,10 +21,10 @@ export const Footer: React.FC = () => {
               A bespoke family initiative blending sacred Indian festive traditions with modern cybersecurity awareness. Created to shield parents, elders, and loved ones from festive online shopping scams.
             </p>
 
-            <div className="pt-2 text-xs text-amber-300/80 font-medium flex items-center gap-1.5">
+            <div className="pt-2 text-xs text-amber-300/80 font-medium flex items-center gap-1.5 flex-wrap">
               <span>Crafted with</span>
               <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
-              <span>by <strong>Om Shrikrishna Gautam</strong> • MSc Cybersecurity Manager, ECE Paris</span>
+              <span>by <strong>Om Shrikrishna Gautam</strong> • Ex-Penetration Tester at TMG Security | MSc Cybersecurity Manager, ECE Paris</span>
             </div>
           </div>
 
@@ -39,6 +39,7 @@ export const Footer: React.FC = () => {
               <li><a href="#cyber-rules" className="hover:text-amber-300 transition-colors">🛡️ 5 Golden Cyber Rules</a></li>
               <li><a href="#authorized-stores" className="hover:text-amber-300 transition-colors">🛍️ Authorized App Directory</a></li>
               <li><a href="#scam-quiz" className="hover:text-amber-300 transition-colors">🎯 Spot the Scam Quiz</a></li>
+              <li><a href="#festive-gift" className="hover:text-amber-300 transition-colors text-amber-300 font-semibold">🪙 Send Shagun / Gift (UPI QR)</a></li>
             </ul>
           </div>
 
@@ -87,3 +88,4 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+

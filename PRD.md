@@ -2,7 +2,7 @@
 
 ## 1. Executive Summary & Vision
 - **Project Name**: Shubh Dhanteras & Diwali Family Greeting with Festive Cyber Suraksha Abhiyan
-- **Author & Creator**: Om Shrikrishna Gautam (MSc Cybersecurity Manager, ECE Paris)
+- **Author & Creator**: Om Shrikrishna Gautam (Ex-Penetration Tester at TMG Security • MSc Cybersecurity Manager, ECE Paris)
 - **Primary Objective**: Provide an authentic, emotionally resonant, and culturally rich festive greeting platform for family members during Dhanteras & Diwali, coupled with a high-impact, easy-to-understand **Cyber Awareness Program** (Cyber Jagrukta / Suraksha).
 - **Core Problem Solved**: The festive shopping rush during Dhanteras and Diwali in India sees a 400%+ spike in phishing, bogus discount e-commerce sites, WhatsApp lottery forwards, fake cashback scams, and courier delivery APK fraud. Families, especially parents, elders, and young relatives, are prime targets. This application protects and empowers loved ones while celebrating the triumph of light, wisdom, and prosperity.
 
@@ -55,6 +55,16 @@
    - Sanchar Saathi / Chakshu Portal for reporting spam SMS and calls.
    - Golden hour banking freeze procedure.
 
+### 3.3. Festive Shagun & UPI QR Code Module
+1. **Google Pay / Multi-App QR Code Asset**:
+   - Official QR code linked to `omgautam721-3@okicici`.
+   - Direct 1-tap UPI deep linking (`upi://pay?pa=omgautam721-3@okicici&pn=Om%20Gautam...`).
+   - One-click clipboard copy with visual feedback toast.
+2. **Professional Profile Showcase**:
+   - Creator accreditation: Ex-Penetration Tester at TMG Security, MSc Cybersecurity Manager (ECE Paris), BCA (DYPIU Pune).
+3. **Safe UPI Educational Reinforcement**:
+   - Explicit visual callout demonstrating that authentic QR code payments require user PIN authorization to SEND money, reinforcing Rule 4.
+
 ---
 
 ## 4. Technical Non-Functional Requirements
@@ -62,3 +72,4 @@
 - **Responsiveness**: Mobile-first design tailored for mobile browsers and WhatsApp Web in-app webviews.
 - **Accessibility**: High-contrast typography, readable font sizes, WCAG AA compliance.
 - **Offline / Static Portability**: Zero backend requirements, deployable to GitHub Pages, Netlify, Vercel, or run locally.
+

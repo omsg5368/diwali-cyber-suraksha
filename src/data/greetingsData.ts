@@ -66,3 +66,4 @@ export const DEFAULT_GREETING_TEMPLATES = {
   diwali: "Wishing you and all family members a luminous, joyous, and prosperous Deepavali! May the sacred diyas illuminate your life with peace, joy, and success. Happy Diwali! 🪔🎆",
   both: "Warmest greetings of Shubh Dhanteras and Happy Diwali to our beloved family! May this festival of lights usher in good health, prosperity, and joy. Let us celebrate with wisdom and keep our digital homes safe! 🪔✨🛡️"
 };
+
