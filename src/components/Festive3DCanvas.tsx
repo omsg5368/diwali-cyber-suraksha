@@ -358,3 +358,4 @@ export const Festive3DCanvas: React.FC<Festive3DCanvasProps> = ({ soundEnabled }
     </div>
   );
 };
+

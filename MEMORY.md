@@ -55,3 +55,7 @@
   4. Cursor-following parallax damping (lerp) and interactive click-to-bless particle triggers.
   5. Strict GPU memory disposal (`dispose()` on all geometries, materials, renderers) to ensure 60fps performance without memory leaks.
 
+### ADR-008: Production Export & Zero-Friction Hosting via Netlify Drop
+- **Decision**: Export optimized production build into `dist/` with `_redirects` SPA rewrite rules and package as `diwali-cyber-suraksha-dist.zip`.
+- **Reasoning**: Netlify Drop (`app.netlify.com/drop`) delivers 100% free hosting with instantaneous SSL, high-performance global CDN, and zero CLI login friction, giving Om Gautam a live `.netlify.app` link to share with family in under 10 seconds.
+

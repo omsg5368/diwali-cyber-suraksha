@@ -46,3 +46,9 @@
 - [x] Mouse & touch parallax tracking with smooth lerp damping.
 - [x] 3D perspective tilt cards (`Tilt3DCard.tsx`) with dynamic specular glare for the UPI QR card and family greeting card.
 - [x] Memory lifecycle management: full cleanup (`dispose()`) of geometries, materials, and requestAnimationFrame loops.
+
+### Phase 6: Production Build & Netlify Deployment
+- [x] Generated optimized production bundle in `dist/` with `_redirects` rule.
+- [x] Created portable deployment archive: `diwali-cyber-suraksha-dist.zip`.
+- [x] Revealed `dist` folder in macOS Finder.
+- [x] Opened `https://app.netlify.com/drop` in default browser for instant 1-step deployment.
